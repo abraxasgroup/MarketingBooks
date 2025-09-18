@@ -9,17 +9,42 @@
 <meta property="og:description" content="Checklist interactivo + plan 1 página. PDF gratis local + mentoría paga.">
 <meta property="og:type" content="website">
 <style>
-  :root { --bg:#0b0f14; --card:#121822; --ink:#e8f0ff; --muted:#9fb0c6; --cta:#ffd166; --accent:#06d6a0; --danger:#ff6b6b; --ok:#70e000;}
-  html,body{margin:0;background:linear-gradient(180deg,var(--bg),#0e141c);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink)}
+  :root {
+    --bg:#05070b; --ink:#e8f0ff; --muted:#9fb0c6; --cta:#ffd166;
+    --card:#121822; --card2:#0d1520; --accent:#06d6a0; --danger:#ff6b6b;
+  }
+  html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden}
+  /* Capa "galaxia" */
+  body::before, body::after{
+    content:""; position:fixed; inset:-10vmax; pointer-events:none; z-index:-2;
+    background:
+      radial-gradient(1200px 800px at 10% 15%, #18233b 0%, transparent 60%),
+      radial-gradient(900px 700px at 80% 10%, #1b1036 0%, transparent 60%),
+      radial-gradient(900px 600px at 30% 85%, #0f2a3a 0%, transparent 60%),
+      linear-gradient(180deg,#06080e 0%, #0b0f14 55%, #05070b 100%);
+    filter:saturate(1.2) brightness(0.95);
+  }
+  /* Estrellas sutiles */
+  body::after{
+    z-index:-1; opacity:.35;
+    background-image:
+      radial-gradient(#ffffffa8 1px, transparent 1px),
+      radial-gradient(#a4c6ff88 1px, transparent 1px),
+      radial-gradient(#ffffff77 1px, transparent 1px);
+    background-size: 3px 3px, 2px 2px, 1px 1px;
+    background-position: 0 0, 10px 20px, 25px 15px;
+    animation: twinkle 12s linear infinite;
+  }
+  @keyframes twinkle{0%{opacity:.25}50%{opacity:.45}100%{opacity:.25}}
   a{color:var(--cta);text-decoration:none} a:hover{text-decoration:underline}
   header{padding:28px 20px;text-align:center}
   .wrap{max-width:980px;margin:0 auto;padding:0 20px 48px}
-  .badge{display:inline-block;border:1px solid #233242;padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.3px}
+  .badge{display:inline-block;border:1px solid #233242;padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.3px;background:#0a1320aa}
   h1{margin:10px 0 6px;font-size:30px}
   p.lead{color:var(--muted);margin:0 auto 14px;max-width:760px}
-  .card{background:linear-gradient(180deg,var(--card),#0d1520);border:1px solid #1d2a39;border-radius:16px;padding:16px;margin-top:18px}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid #1d2a39;border-radius:16px;padding:16px;margin-top:18px}
   .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
-  .kpi{background:#0c1420;border:1px solid #1d2a39;border-radius:12px;padding:10px;text-align:center}
+  .kpi{background:#0c1420ba;border:1px solid #1d2a39;border-radius:12px;padding:10px;text-align:center}
   .kpi b{display:block;font-size:18px}
   .cta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0;justify-content:center}
   .btn{background:linear-gradient(180deg,#12253a,#0e1d2e);border:1px solid #27435f;border-radius:12px;padding:10px 14px;color:#e7f1ff;font-weight:600;display:inline-flex;gap:8px;align-items:center}
@@ -35,7 +60,7 @@
   .row>div{display:flex;flex-direction:column;gap:6px}
   input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #26384f;background:#0b1320;color:#eaf2ff}
   label{font-size:14px}
-  .check{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:10px;border:1px dashed #203043;margin:8px 0}
+  .check{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:10px;border:1px dashed #203043;margin:8px 0;background:#08101b99}
   .note{font-size:12px;color:#9fb0c6}
   .split{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
   @media (max-width:900px){.split,.row{grid-template-columns:1fr}}
@@ -48,13 +73,9 @@
     <h1>Due Diligence Minera — Checklist Interactivo + Plan 1-Página</h1>
     <p class="lead">Descargá el PDF gratuito y, si querés aplicarlo a tu caso, agendá una <b>mentoría paga por reunión</b>.</p>
     <div class="cta">
-      <!-- ES: cambiá el nombre si tu archivo es distinto -->
-      <a class="btn primary" href="downloads/como-ser-un-intermediario-mineria.pdf" download>📕 PDF (Español) — Descargar</a>
-      <!-- EN: cambiá el nombre si tu archivo es distinto -->
-      <a class="btn" href="downloads/how-to-be-an-intermediary-mining-business.pdf" download>📕 PDF (English) — Download</a>
+      <!-- SOLO estos 2 botones arriba (como pediste) -->
+      <a class="btn primary" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentor%C3%ADa%20paga%20sobre%20Due%20Diligence%20Minera." target="_blank" rel="noopener">💬 Reservar mentoría (WhatsApp)</a>
       <a class="btn" href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">🌐 Abraxas Group</a>
-      <a class="btn warn" href="mailto:o.chinchilla@abraxas-group.lat?subject=Mentor%C3%ADa%20Due%20Diligence%20Minera&body=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentoria%20paga.%20Mi%20proyecto%20es%3A%20" target="_blank" rel="noopener">✉️ Reservar por Email</a>
-      <a class="btn" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentoria%20paga%20sobre%20Due%20Diligence%20Minera." target="_blank" rel="noopener">💬 WhatsApp Mentoría</a>
     </div>
     <div class="kpis">
       <div class="kpi"><b id="kpi1">0%</b><span class="muted">Checklist completado</span></div>
@@ -134,8 +155,7 @@
         <h3>¿Listo para mentoría?</h3>
         <p>Aplicamos este 1-pager a tu caso, ordenamos documentos y definimos los próximos 7 días.</p>
         <div class="cta">
-          <a class="btn primary" href="https://wa.me/543417400299?text=Quiero%20mentoria%20sobre%20Due%20Diligence" target="_blank" rel="noopener">💬 WhatsApp</a>
-          <a class="btn" href="mailto:o.chinchilla@abraxas-group.lat?subject=Mentor%C3%ADa%20DD%20Minera" target="_blank" rel="noopener">✉️ Email</a>
+          <a class="btn primary" href="https://wa.me/543417400299?text=Quiero%20mentoria%20sobre%20Due%20Diligence" target="_blank" rel="noopener">💬 Reservar mentoría (WhatsApp)</a>
         </div>
         <details>
           <summary>Incluye</summary>
@@ -149,13 +169,13 @@
       </aside>
     </section>
 
-    <!-- 4) CTA final -->
+    <!-- 4) PDFs + CTA final (WhatsApp) -->
     <section class="card">
       <h2>Descargá el PDF y pasemos a resultados</h2>
       <div class="cta">
-        <a class="btn primary" href="downloads/como-ser-un-intermediario-mineria.pdf" download>📕 PDF (ES) — descarga directa</a>
-        <a class="btn" href="downloads/how-to-be-an-intermediary-mining-business.pdf" download>📕 PDF (EN) — direct download</a>
-        <a class="btn warn" href="mailto:o.chinchilla@abraxas-group.lat?subject=Mentor%C3%ADa%20Due%20Diligence%20Minera&body=Quiero%20coordinar%20una%20reuni%C3%B3n%20paga." target="_blank" rel="noopener">💼 Reservar Mentoría</a>
+        <a class="btn" id="pdfEs" href="downloads/como-ser-un-intermediario-mineria.pdf" download>📕 PDF (ES) — descarga directa</a>
+        <a class="btn" id="pdfEn" href="downloads/how-to-be-an-intermediary-mining-business.pdf" download>📕 PDF (EN) — direct download</a>
+        <a class="btn warn" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20coordinar%20una%20reuni%C3%B3n%20paga%20de%20mentoria%20sobre%20DD%20Minera." target="_blank" rel="noopener">💼 Reservar mentoría (WhatsApp)</a>
       </div>
       <p class="note">La mentoría es de pago por reunión. El PDF es gratuito como preparación.</p>
     </section>
@@ -213,7 +233,7 @@
   list.addEventListener('change', updateProgress);
   updateProgress();
 
-  // ====== 1-Pager (campos mínimos) ======
+  // ====== Generador 1-Pager ======
   const el = id => document.getElementById(id);
   function buildOnePager(){
     const name = el('p_name').value || 'Proyecto Minero';
@@ -246,6 +266,18 @@ Contacto Abraxas
     const txt = el('out').value || buildOnePager();
     navigator.clipboard.writeText(txt).catch(()=>{});
   });
+
+  // ====== Fallback a RAW si el PDF aún no está en Pages ======
+  async function ensurePdf(id, rawUrl){
+    const a = document.getElementById(id);
+    try{
+      const r = await fetch(a.getAttribute('href'), { method: 'HEAD' });
+      if (!r.ok) { a.href = rawUrl; a.removeAttribute('download'); }
+    }catch(e){ a.href = rawUrl; a.removeAttribute('download'); }
+  }
+  // Cambiá el owner/repo si tu repo no es este:
+  ensurePdf('pdfEs','https://github.com/abraxasgroup/MarketingBooks/raw/main/downloads/como-ser-un-intermediario-mineria.pdf');
+  ensurePdf('pdfEn','https://github.com/abraxasgroup/MarketingBooks/raw/main/downloads/how-to-be-an-intermediary-mining-business.pdf');
 </script>
 </body>
 </html>
