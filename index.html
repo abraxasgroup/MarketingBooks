@@ -4,11 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Due Diligence Minera — Lead Magnet + Mentoría | Abraxas Group</title>
-<meta name="description" content="Checklist interactivo de Due Diligence Minera basado en el libro de Oscar E. Chinchilla. Descarga el PDF gratuito (Drive) y agenda mentoría paga por reunión.">
+<meta name="description" content="Checklist interactivo de Due Diligence Minera. Descargá el PDF gratis y agendá mentoría paga por reunión para llevar tu operación a resultados.">
 <meta property="og:title" content="Due Diligence Minera — Abraxas Group">
-<meta property="og:description" content="Checklist interactivo + plan de 1 página. PDF gratis (Drive) + mentoría paga.">
+<meta property="og:description" content="Checklist interactivo + plan 1 página. PDF gratis local + mentoría paga.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.abraxas-group.lat/">
 <style>
   :root { --bg:#0b0f14; --card:#121822; --ink:#e8f0ff; --muted:#9fb0c6; --cta:#ffd166; --accent:#06d6a0; --danger:#ff6b6b; --ok:#70e000;}
   html,body{margin:0;background:linear-gradient(180deg,var(--bg),#0e141c);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink)}
@@ -18,9 +17,8 @@
   .badge{display:inline-block;border:1px solid #233242;padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.3px}
   h1{margin:10px 0 6px;font-size:30px}
   p.lead{color:var(--muted);margin:0 auto 14px;max-width:760px}
-  .grid{display:grid;gap:14px;margin-top:18px}
-  .card{background:linear-gradient(180deg,var(--card),#0d1520);border:1px solid #1d2a39;border-radius:16px;padding:16px}
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .card{background:linear-gradient(180deg,var(--card),#0d1520);border:1px solid #1d2a39;border-radius:16px;padding:16px;margin-top:18px}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
   .kpi{background:#0c1420;border:1px solid #1d2a39;border-radius:12px;padding:10px;text-align:center}
   .kpi b{display:block;font-size:18px}
   .cta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0;justify-content:center}
@@ -30,19 +28,14 @@
   .btn.warn{background:linear-gradient(180deg,#3a2020,#2e1717);border-color:#6d2e2e}
   .muted{color:var(--muted)}
   .pill{display:inline-block;background:#0c1a1a;color:#92ffe3;border:1px solid #114444;border-radius:999px;font-size:12px;padding:3px 8px;margin-left:8px}
-  .progress{height:12px;background:#0c121a;border:1px solid #1d2a39;border-radius:999px;overflow:hidden}
+  .progress{height:12px;background:#0c121a;border:1px solid #1d2a39;border-radius:999px;overflow:hidden;margin-top:10px}
   .bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#49f7c8)}
   .score{font-weight:700}
-  details{border:1px solid #223246;border-radius:12px;padding:12px;background:#0e1622}
-  details+details{margin-top:10px}
-  summary{cursor:pointer;font-weight:600;color:#d6e4ff}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .row>div{display:flex;flex-direction:column;gap:6px}
   input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #26384f;background:#0b1320;color:#eaf2ff}
   label{font-size:14px}
   .check{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:10px;border:1px dashed #203043;margin:8px 0}
-  .ok{color:var(--ok)}
-  .bad{color:var(--danger)}
   .note{font-size:12px;color:#9fb0c6}
   .split{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
   @media (max-width:900px){.split,.row{grid-template-columns:1fr}}
@@ -53,119 +46,140 @@
   <header>
     <span class="badge">Abraxas Group · Lead Magnet + Mentoría Paga</span>
     <h1>Due Diligence Minera — Checklist Interactivo + Plan 1-Página</h1>
-    <p class="lead">Basado en el libro de Oscar E. Chinchilla. Descargá el PDF gratuito como <b>gancho</b> y, si querés aplicarlo a tu caso, agenda una <b>mentoría paga por reunión</b>.</p>
+    <p class="lead">Descargá el PDF gratuito y, si querés aplicarlo a tu caso, agendá una <b>mentoría paga por reunión</b>.</p>
     <div class="cta">
-      <!-- Botón PDF directo (si lo alojás en tu web) -->
-      <a class="btn primary" id="pdfBtn" href="https://www.abraxas-group.lat/downloads/como-ser-intermediario-mineria.pdf" target="_blank" rel="noopener">📕 Descargar PDF Gratis</a>
-      <!-- NUEVO: Carpeta de libros en Drive -->
-      <a class="btn" id="driveBtn" href="https://drive.google.com/drive/folders/1gQdSbmDcwzU1k37sudfUAUeXWUWKBTAu?usp=sharing" target="_blank" rel="noopener">📂 Carpeta de Libros (Drive)</a>
+      <!-- ES: cambiá el nombre si tu archivo es distinto -->
+      <a class="btn primary" href="downloads/como-ser-un-intermediario-mineria.pdf" download>📕 PDF (Español) — Descargar</a>
+      <!-- EN: cambiá el nombre si tu archivo es distinto -->
+      <a class="btn" href="downloads/how-to-be-an-intermediary-mining-business.pdf" download>📕 PDF (English) — Download</a>
       <a class="btn" href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">🌐 Abraxas Group</a>
-      <a class="btn warn" href="mailto:o.chinchilla@abraxas-group.lat?subject=Mentor%C3%ADa%20Due%20Diligence%20Minera&body=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentor%C3%ADa%20paga.%20Mi%20proyecto%20es%3A%20" target="_blank" rel="noopener">✉️ Reservar por Email</a>
+      <a class="btn warn" href="mailto:o.chinchilla@abraxas-group.lat?subject=Mentor%C3%ADa%20Due%20Diligence%20Minera&body=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentoria%20paga.%20Mi%20proyecto%20es%3A%20" target="_blank" rel="noopener">✉️ Reservar por Email</a>
       <a class="btn" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentoria%20paga%20sobre%20Due%20Diligence%20Minera." target="_blank" rel="noopener">💬 WhatsApp Mentoría</a>
     </div>
     <div class="kpis">
       <div class="kpi"><b id="kpi1">0%</b><span class="muted">Checklist completado</span></div>
-      <div class="kpi"><b id="kpi2">0/10</b><span class="muted">Puntos DD</span></div>
+      <div class="kpi"><b id="kpi2">0/6</b><span class="muted">Puntos DD</span></div>
       <div class="kpi"><b id="kpi3">0</b><span class="muted">Red flags</span></div>
       <div class="kpi"><b id="kpi4">0</b><span class="muted">OKs críticos</span></div>
     </div>
   </header>
 
   <div class="wrap">
+    <!-- 1) Qué valida la DD (en simple) -->
     <section class="card">
-      <h2>Qué valida la Due Diligence <span class="pill">según el libro</span></h2>
-      <p class="muted">Núcleo: propiedad y trazabilidad, respaldo técnico (geología/ensayos, NI 43-101 o JORC), ambiental y permisos, y protección de fees (NDA/NCNDA, IMFPA). <em>Anti-humo, pro resultado.</em></p>
+      <h2>Qué valida la Due Diligence <span class="pill">en simple</span></h2>
+      <p class="muted">Propiedad real del activo, respaldo técnico (ensayos/geo y, si existe, NI&nbsp;43-101 o JORC), permisos/ambiental y protección del fee (NDA/NCNDA + IMFPA). Sin humo.</p>
     </section>
 
+    <!-- 2) Checklist súper fácil (6 puntos) -->
     <section class="card">
-      <h2>Checklist de Due Diligence (10 puntos)</h2>
-      <div class="note">Marcá lo que tengas. La barra y el score se actualizan en vivo.</div>
+      <h2>Checklist de Due Diligence (rápido)</h2>
+      <div class="note">Marcá lo que tenés. La barra y el score se actualizan en vivo.</div>
       <div id="list"></div>
       <div class="progress" aria-label="Progreso"><div class="bar" id="bar"></div></div>
-      <p>Score: <span class="score" id="score">0/10</span> · <span id="veredict" class="muted">Cargá datos para evaluar riesgo.</span></p>
+      <p>Score: <span class="score" id="score">0/6</span> · <span id="veredict" class="muted">Completá para ver tu estado.</span></p>
     </section>
 
+    <!-- 3) Generador 1-pager (fricción mínima) -->
     <section class="card split">
       <div>
-        <h2>Generá tu Plan de 1-Página (para enviar tras NDA)</h2>
+        <h2>Tu Plan de 1-Página (en 3 clics)</h2>
         <div class="row">
-          <div><label>Título del proyecto<input id="p_name" placeholder="p.ej., Proyecto Cobre Andino — Perú"></label></div>
-          <div><label>Jurisdicción<input id="p_jur" placeholder="País/Provincia/Catastro"></label></div>
+          <div><label>Proyecto (opcional)<input id="p_name" placeholder="p.ej., Cobre Andino — Perú"></label></div>
+          <div><label>Jurisdicción (opcional)<input id="p_jur" placeholder="País/Provincia"></label></div>
         </div>
-        <div class="row">
-          <div><label>Estado de papeles (Título/Concesión)
-            <select id="p_title"><option>No verificado</option><option>Verificado en catastro</option><option>En trámite / renovación</option></select>
-          </label></div>
-          <div><label>Respaldo técnico
-            <select id="p_tech"><option>Geología/ensayos básicos</option><option>NI 43-101</option><option>JORC</option><option>Ninguno</option></select>
-          </label></div>
-        </div>
-        <div class="row">
-          <div><label>Ambiental/permisos
-            <select id="p_env"><option>EIA aprobado</option><option>EIA en trámite</option><option>Permisos básicos</option><option>N/A</option></select>
-          </label></div>
-          <div><label>Próxima decisión (OODA)<input id="p_dec" placeholder="p.ej., ¿Emitir LOI esta semana?"></label></div>
-        </div>
-        <label>Riesgo #1 (Pre-Mortem)<input id="p_risk" placeholder="p.ej., QA/QC insuficiente en origen"></label>
+
+        <label>Documentación base</label>
+        <select id="p_docs">
+          <option value="Título + Ensayos básicos">Tengo Título + Ensayos básicos</option>
+          <option value="Sólo Título">Sólo Título</option>
+          <option value="Sólo Ensayos">Sólo Ensayos</option>
+          <option value="Sin papeles">Aún sin papeles</option>
+        </select>
+
+        <label>Estándar técnico</label>
+        <select id="p_std">
+          <option>Sin estándar (por ahora)</option>
+          <option>NI 43-101</option>
+          <option>JORC</option>
+        </select>
+
+        <label>Permisos/ambiental</label>
+        <select id="p_env">
+          <option>Permisos básicos</option>
+          <option>EIA en trámite</option>
+          <option>EIA aprobado</option>
+          <option>N/A</option>
+        </select>
+
+        <label>Si esto sale mal, ¿cuál sería la razón #1?</label>
+        <select id="p_risk">
+          <option>QA/QC insuficiente</option>
+          <option>Propiedad/Título dudoso</option>
+          <option>Bypass / Cadena larga de intermediarios</option>
+          <option>Expectativas irreales de precio/volumen</option>
+          <option>Permisos ambientales faltantes</option>
+        </select>
+
         <div class="cta">
-          <button class="btn" id="gen">🧩 Generar resumen (copiar)</button>
-          <button class="btn" id="copy">📋 Copiar al portapapeles</button>
+          <button class="btn" id="gen">🧩 Generar resumen</button>
+          <button class="btn" id="copy">📋 Copiar</button>
         </div>
         <textarea id="out" rows="8" placeholder="Tu 1-pager aparecerá aquí…"></textarea>
-        <p class="note">Tip AAR: después de cada call, registra <em>qué esperabas / qué ocurrió / por qué / qué cambias</em> para la próxima.</p>
+
+        <p class="note">¿Querés que lo convirtamos en un plan real y protejamos tu fee? Pedí una mentoría (paga por reunión).</p>
       </div>
+
       <aside>
         <h3>¿Listo para mentoría?</h3>
-        <p>Aplicamos este 1-pager a tu caso real, definimos gaps y plan de cierre. <b>La sesión es paga por reunión</b>.</p>
+        <p>Aplicamos este 1-pager a tu caso, ordenamos documentos y definimos los próximos 7 días.</p>
         <div class="cta">
-          <a class="btn primary" href="https://wa.me/543417400299?text=Quiero%20mentoria%20sobre%20Due%20Diligence" target="_blank" rel="noopener">💬 Agendar por WhatsApp</a>
-          <a class="btn" href="mailto:o.chinchilla@abraxas-group.lat?subject=Mentor%C3%ADa%20DD%20Minera" target="_blank" rel="noopener">✉️ Solicitar por Email</a>
+          <a class="btn primary" href="https://wa.me/543417400299?text=Quiero%20mentoria%20sobre%20Due%20Diligence" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn" href="mailto:o.chinchilla@abraxas-group.lat?subject=Mentor%C3%ADa%20DD%20Minera" target="_blank" rel="noopener">✉️ Email</a>
         </div>
         <details>
-          <summary>Qué incluye</summary>
+          <summary>Incluye</summary>
           <ul class="muted">
-            <li>Revisión de papeles: título, geología/ensayos, NI 43-101/JORC, ambiental.</li>
-            <li>Estructura de NDA/NCNDA + orden de entrega de info.</li>
-            <li>Protección de fee (IMFPA) y señales de bypass.</li>
+            <li>Validación de propiedad y trazabilidad.</li>
+            <li>Revisión técnica (ensayos / NI 43-101 / JORC).</li>
+            <li>Permisos/ambiental y orden correcto de divulgación.</li>
+            <li>Protección de fee (NDA/NCNDA + IMFPA) y señales de bypass.</li>
           </ul>
         </details>
       </aside>
     </section>
 
+    <!-- 4) CTA final -->
     <section class="card">
       <h2>Descargá el PDF y pasemos a resultados</h2>
       <div class="cta">
-        <a class="btn primary" id="pdfBtn2" href="https://www.abraxas-group.lat/downloads/como-ser-intermediario-mineria.pdf" target="_blank" rel="noopener">📕 PDF (Mirror Web)</a>
-        <a class="btn" id="driveBtn2" href="https://drive.google.com/drive/folders/1gQdSbmDcwzU1k37sudfUAUeXWUWKBTAu?usp=sharing" target="_blank" rel="noopener">📂 Carpeta de Libros (Drive)</a>
+        <a class="btn primary" href="downloads/como-ser-un-intermediario-mineria.pdf" download>📕 PDF (ES) — descarga directa</a>
+        <a class="btn" href="downloads/how-to-be-an-intermediary-mining-business.pdf" download>📕 PDF (EN) — direct download</a>
         <a class="btn warn" href="mailto:o.chinchilla@abraxas-group.lat?subject=Mentor%C3%ADa%20Due%20Diligence%20Minera&body=Quiero%20coordinar%20una%20reuni%C3%B3n%20paga." target="_blank" rel="noopener">💼 Reservar Mentoría</a>
       </div>
-      <p class="note">*La mentoría es de pago por reunión. El PDF es gratuito como preparación.</p>
+      <p class="note">La mentoría es de pago por reunión. El PDF es gratuito como preparación.</p>
     </section>
 
     <footer>
-      © Abraxas Group — “Donde el Riesgo encuentra la Oportunidad”. Basado en el libro de Oscar Esteban Chinchilla.
+      © Abraxas Group — “Donde el Riesgo encuentra la Oportunidad”.
     </footer>
   </div>
 
 <script>
-  // ============ 1) Checklist ============
+  // ====== Checklist (6 ítems, simple) ======
   const items = [
-    { t:'Título de concesión verificado en catastro', key:'title', crit:true },
-    { t:'Cadena de titularidad/trazabilidad clara (dueño real identificado)', key:'owner', crit:true },
-    { t:'Informe geológico + ensayos (laboratorio acreditado)', key:'geo', crit:true },
-    { t:'NI 43-101 o JORC disponible (tras NDA)', key:'std', crit:false },
-    { t:'EIA/Permisos ambientales (en trámite o aprobados)', key:'eia', crit:false },
-    { t:'NDA/NCNDA firmado antes de información sensible', key:'nda', crit:true },
-    { t:'Orden de revelación correcto (título → resumen → NI)', key:'order', crit:false },
-    { t:'IMFPA/Fee Agreement listo para etapa avanzada', key:'imfpa', crit:false },
-    { t:'Sin sobrepromesas (volúmenes/precios realistas)', key:'nopromise', crit:true },
-    { t:'Cadena corta de intermediarios (baja entropía)', key:'chain', crit:false },
+    { t:'Título o derecho de concesión (al menos evidencia)', crit:true },
+    { t:'Ensayos/Informe técnico básico (laboratorio identificado)', crit:true },
+    { t:'Propietario real identificado (trazabilidad)', crit:true },
+    { t:'Permisos/ambiental en curso o definidos', crit:false },
+    { t:'NDA/NCNDA antes de data sensible', crit:true },
+    { t:'IMFPA/Fee preparado (etapa avanzada)', crit:false },
   ];
   const list = document.getElementById('list');
   items.forEach((it)=>{
     const row = document.createElement('label');
     row.className = 'check';
-    row.innerHTML = `<input type="checkbox" data-key="${it.key}"><div><b>${it.t}</b><br><span class="note">${it.crit? 'Crítico':'Recomendado'}</span></div>`;
+    row.innerHTML = `<input type="checkbox"><div><b>${it.t}</b><br><span class="note">${it.crit? 'Crítico':'Recomendado'}</span></div>`;
     list.appendChild(row);
   });
 
@@ -181,9 +195,9 @@
     const checks = Array.from(list.querySelectorAll('input[type="checkbox"]'));
     const total = checks.length;
     const done = checks.filter(c=>c.checked).length;
-    const crits = items.filter(it=>it.crit);
-    const doneCrit = crits.filter(it=>list.querySelector(`input[data-key="${it.key}"]`).checked).length;
-    const redFlags = crits.length - doneCrit;
+    const critCount =  items.filter(i=>i.crit).length;
+    const doneCrit = items.filter((it,idx)=>it.crit && checks[idx].checked).length;
+    const redFlags = critCount - doneCrit;
     const pct = Math.round((done/total)*100);
     bar.style.width = pct+'%';
     k1.textContent = pct + '%';
@@ -193,49 +207,35 @@
     scoreEl.textContent = `${done}/${total}`;
     if (redFlags >= 2) veredict.innerHTML = '⚠️ Riesgo alto: faltan críticos. Recomendado: Mentoría antes de avanzar.';
     else if (redFlags === 1) veredict.innerHTML = '🟡 Riesgo medio: resolvé el crítico pendiente.';
-    else if (done >= 8) veredict.innerHTML = '🟢 Perfil sólido: listo para presentación controlada.';
+    else if (done >= 5) veredict.innerHTML = '🟢 Perfil sólido: listo para revisión controlada.';
     else veredict.innerHTML = 'ℹ️ Seguís cargando: completá el checklist.';
   }
   list.addEventListener('change', updateProgress);
   updateProgress();
 
-  // ============ 2) Generador 1-pager ============
+  // ====== 1-Pager (campos mínimos) ======
   const el = id => document.getElementById(id);
   function buildOnePager(){
     const name = el('p_name').value || 'Proyecto Minero';
-    const jur = el('p_jur').value || 'Jurisdicción';
-    const title = el('p_title').value || 'No verificado';
-    const tech = el('p_tech').value || 'Geología/ensayos básicos';
-    const env = el('p_env').value || 'Permisos básicos';
-    const dec = el('p_dec').value || 'Definir próximo hito (LOI/NDA/MOU) en 7 días';
-    const risk = el('p_risk').value || 'Definir QA/QC y laboratorio acreditado';
+    const jur  = el('p_jur').value || 'Jurisdicción';
+    const docs = el('p_docs').value;
+    const std  = el('p_std').value;
+    const env  = el('p_env').value;
+    const risk = el('p_risk').value;
+
     const txt =
 `1-Pager de Due Diligence — ${name}
 Jurisdicción: ${jur}
 
-Propiedad & Trazabilidad
-• Título/Concesión: ${title}
-• Cadena de titularidad: verificada tras NDA
+Documentación base: ${docs}
+Estándar técnico: ${std}
+Permisos/ambiental: ${env}
 
-Respaldo Técnico
-• Estado técnico: ${tech}
-• Entregables: resumen ejecutivo + data-room tras NDA
+Si esto sale mal, la razón #1 sería: ${risk}
+Mitigación: orden correcto de documentos, QA/QC independiente y NDA/NCNDA antes de data sensible.
 
-Ambiental & Permisos
-• Estado: ${env}
-
-Orden de Revelación (según libro)
-1) Título (existencia) → 2) Resumen técnico + ensayos → 3) NI 43-101/ JORC (tras NDA) → 4) EIA/Permisos → 5) IMFPA en negociación avanzada
-
-Toma de Decisión (OODA)
-• Próxima decisión: ${dec}
-
-Pre-Mortem (riesgo #1)
-• ${risk}
-• Mitigación: QA/QC independiente + escrow; evitar sobrepromesas de volumen/precio.
-
-Protección de Fee
-• NDA/NCNDA antes de data sensible; IMFPA ligado al contrato principal.
+Próximo hito (7 días): Validar título/ensayos y armar data-room básico.
+Protección de fee: IMFPA ligado al contrato principal.
 
 Contacto Abraxas
 • o.chinchilla@abraxas-group.lat · +54 341 740 0299`;
@@ -246,24 +246,6 @@ Contacto Abraxas
     const txt = el('out').value || buildOnePager();
     navigator.clipboard.writeText(txt).catch(()=>{});
   });
-
-  // ============ 3) UTM simple para PDF y Drive ============
-  function tagLink(a, medium='pdf'){
-    try{
-      const url = new URL(a.href);
-      if(url.hostname.includes('google.com')){
-        // Para Drive, agregamos hash-tracking simple (no rompe la URL)
-        a.href = a.href + (a.href.includes('#')?'&':'#') + 'utm_source=landing-dd&utm_medium=drive&utm_campaign=mentoria';
-      }else{
-        url.searchParams.set('utm_source','landing-dd');
-        url.searchParams.set('utm_medium', medium);
-        url.searchParams.set('utm_campaign','mentoria');
-        a.href = url.toString();
-      }
-    }catch(e){}
-  }
-  ['pdfBtn','pdfBtn2'].forEach(id=>{ const a = document.getElementById(id); if(a) tagLink(a,'pdf'); });
-  ['driveBtn','driveBtn2'].forEach(id=>{ const a = document.getElementById(id); if(a) tagLink(a,'drive'); });
 </script>
 </body>
 </html>
