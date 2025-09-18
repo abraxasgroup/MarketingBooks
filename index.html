@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Publicación — Libro de Minería | Abraxas Group</title>
+<style>
+  :root { --bg:#0b0f14; --card:#121822; --ink:#e8f0ff; --muted:#9fb0c6; --cta:#ffd166; --accent:#06d6a0; }
+  html,body{margin:0;background:linear-gradient(180deg,var(--bg),#0e141c);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink)}
+  a{color:var(--cta);text-decoration:none} a:hover{text-decoration:underline}
+  header{padding:28px 20px;text-align:center}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 48px}
+  .badge{display:inline-block;border:1px solid #233242;padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.3px}
+  h1{margin:10px 0 6px;font-size:28px}
+  p.lead{color:var(--muted);margin:0 auto 14px;max-width:760px}
+  .grid{display:grid;gap:14px;margin-top:18px}
+  .card{background:linear-gradient(180deg,var(--card),#0d1520);border:1px solid #1d2a39;border-radius:16px;padding:16px}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .kpi{background:#0c1420;border:1px solid #1d2a39;border-radius:12px;padding:10px;text-align:center}
+  .kpi b{display:block;font-size:18px}
+  .steps li{margin:8px 0}
+  details{border:1px solid #223246;border-radius:12px;padding:12px;background:#0e1622}
+  details + details{margin-top:10px}
+  summary{cursor:pointer;font-weight:600;color:#d6e4ff}
+  .pill{display:inline-block;background:#0c1a1a;color:#92ffe3;border:1px solid #114444;border-radius:999px;font-size:12px;padding:3px 8px;margin-left:8px}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+  .btn{background:linear-gradient(180deg,#12253a,#0e1d2e);border:1px solid #27435f;border-radius:12px;padding:10px 14px;color:#e7f1ff;font-weight:600}
+  .btn:hover{filter:brightness(1.07)}
+  .btn.primary{background:linear-gradient(180deg,#204a3a,#173a2e);border-color:#2e6d58}
+  .progress{height:10px;background:#0c121a;border:1px solid #1d2a39;border-radius:999px;overflow:hidden}
+  .bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#49f7c8)}
+  .muted{color:var(--muted)}
+  .checklist label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:10px;border:1px dashed #203043;margin:8px 0}
+  footer{margin-top:28px;color:#8ea4bd;text-align:center;font-size:12px}
+</style>
+</head>
+<body>
+  <header>
+    <span class="badge">Metodologías de aprendizaje aplicadas a Comercio Exterior & Minería</span>
+    <h1>“Aprender para ejecutar” — 5 métodos comprobados para acelerar tu lectura del <em>Libro de Minería</em> y bajarlo a negocio real</h1>
+    <p class="lead">Diseñado como una guía de productividad práctica: menos humo, más ROI en operaciones cross-border.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">Ir a Abraxas Group</a>
+      <a class="btn" href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">Leer el Libro (link)</a>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><b id="kpi1">0%</b><span class="muted">Plan ejecutable</span></div>
+      <div class="kpi"><b id="kpi2">0</b><span class="muted">Acciones priorizadas</span></div>
+      <div class="kpi"><b id="kpi3">0</b><span class="muted">Bloqueos resueltos</span></div>
+      <div class="kpi"><b id="kpi4">0</b><span class="muted">Aprendizajes validados</span></div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <!-- 1) Lista de verificación concisa — planificación conceptual -->
+    <section class="card">
+      <h2>Lista de verificación — de lectura a operación (conceptual, 4 pasos)</h2>
+      <ol class="steps checklist" id="steps">
+        <li>
+          <label><input type="checkbox" data-points="1" />
+            <div><b>Mapea el terreno competitivo con Wardley Mapping</b><br>
+              <span class="muted">Antes de leer en detalle, sitúa cada concepto del libro (recursos, proveedores, riesgos, CAPEX) en una cadena de valor y su etapa de evolución. Evita estudiar “en el vacío”.</span>
+            </div>
+          </label>
+        </li>
+        <li>
+          <label><input type="checkbox" data-points="1" />
+            <div><b>Define decisiones críticas con OODA Loop</b><br>
+              <span class="muted">Observa–Orienta–Decide–Actúa para cada capítulo: qué dato falta, qué señal valida precio, qué acuerdo acelera la operación (LOI, NDA, NCNDA).</span>
+            </div>
+          </label>
+        </li>
+        <li>
+          <label><input type="checkbox" data-points="1" />
+            <div><b>Anticípate a fallas con Pre-Mortem</b><br>
+              <span class="muted">Imagina que la operación fracasó: enumera 5 causas (KYC/AML, logística, precio INCOTERM, QA/QC, compliance) y diseña mitigaciones antes de avanzar.</span>
+            </div>
+          </label>
+        </li>
+        <li>
+          <label><input type="checkbox" data-points="1" />
+            <div><b>Consolida aprendizaje operativo con AAR (After-Action Review)</b><br>
+              <span class="muted">Tras cada intento/prospecto: ¿qué esperábamos?, ¿qué ocurrió?, ¿por qué?, ¿qué repetimos/cambiamos en el próximo deal?</span>
+            </div>
+          </label>
+        </li>
+      </ol>
+      <div class="progress" aria-label="Progreso">
+        <div class="bar" id="bar"></div>
+      </div>
+    </section>
+
+    <!-- 2) Métodos (reales), qué hacen y por qué sirven en comercio exterior/minería -->
+    <section class="grid">
+      <details open>
+        <summary>Wardley Mapping <span class="pill">Mapeo estratégico</span></summary>
+        <p><b>Qué hace:</b> Visualiza cadena de valor (de exploración a refinado) y la madurez de cada componente (genesis → producto → commodity) para decidir <i>dónde competir</i> y <i>qué tercerizar</i>.</p>
+        <p><b>Por qué destaca en minería/comex:</b> Reduce derroche de due-diligence en áreas comoditizadas y enfoca la lectura del libro en ventajas que sí cambian el resultado (contratos, logística, financiación, acceso).</p>
+        <p class="muted">Resultado típico: claridad de foco (proveedores clave, cuellos de botella, costos que mandan).</p>
+      </details>
+
+      <details>
+        <summary>OODA Loop <span class="pill">Toma de decisiones</span></summary>
+        <p><b>Qué hace:</b> Ciclo iterativo para decidir con señales reales (pricing, disponibilidad, tiempos de puerto) y actuar rápido sin perder control.</p>
+        <p><b>Por qué destaca:</b> Convierte lectura en micro-decisiones (¿emitimos LOI? ¿pedimos RWA? ¿pasamos a MOU?) con criterios observables.</p>
+        <p class="muted">Resultado típico: menor latencia entre conocimiento y acción comercial.</p>
+      </details>
+
+      <details>
+        <summary>Pre-Mortem <span class="pill">Gestión de riesgo</span></summary>
+        <p><b>Qué hace:</b> Identifica <i>por adelantado</i> las razones del fracaso para diseñar salvaguardas (escrow, QA/QC independiente, términos de entrega, penalidades).</p>
+        <p><b>Por qué destaca:</b> Elimina “sorpresas previsibles” (compliance, logística, crédito) antes de gastar horas/capital.</p>
+        <p class="muted">Resultado típico: menor tasa de deals caídos por riesgos básicos.</p>
+      </details>
+
+      <details>
+        <summary>AAR — After-Action Review <span class="pill">Aprendizaje operativo</span></summary>
+        <p><b>Qué hace:</b> Post-mortem breve, estructurado y accionable en cada intento de operación (win o loss).</p>
+        <p><b>Por qué destaca:</b> Acelera el “time-to-mastery” al cerrar el loop entre la teoría del libro y los resultados de campo.</p>
+        <p class="muted">Resultado típico: playbooks vivos y repetibles.</p>
+      </details>
+
+      <details>
+        <summary>Técnica Feynman <span class="pill">Dominio conceptual</span></summary>
+        <p><b>Qué hace:</b> Obliga a explicar cada concepto del libro (por ejemplo, INCOTERMS, modelos de QA/QC, estructura de LOI) en lenguaje simple y con ejemplos propios.</p>
+        <p><b>Por qué destaca:</b> Exposición de puntos ciegos antes de negociar; si no puedes explicarlo en 2–3 frases, aún no está listo para el cliente.</p>
+        <p class="muted">Resultado típico: claridad pedagógica que mejora la persuasión comercial.</p>
+      </details>
+    </section>
+
+    <!-- 3) Resumen destacado (elección y contrastes) -->
+    <section class="card">
+      <h2>Elección destacada y resumen</h2>
+      <ul>
+        <li><b>Wardley Mapping</b>: Prioriza <i>dónde</i> crear ventaja (no todo requiere excelencia). Útil al abrir mercados o comparar proveedores.</li>
+        <li><b>OODA Loop</b>: Pone reloj a la decisión. Ideal para subastas, ventanas de precio o slots logísticos.</li>
+        <li><b>Pre-Mortem</b>: Reduce “riesgos tontos” (KYC/AML, QA/QC, términos de pago).</li>
+        <li><b>AAR</b>: Convierte cada intento en IP comercial (playbook específico del nicho).</li>
+        <li><b>Feynman</b>: Detecta lagunas conceptuales antes de sentarte con el comprador.</li>
+      </ul>
+      <p class="muted"><b>Contrastes & evidencia:</b> Estos métodos están documentados en literatura de estrategia y aprendizaje (estrategia visual de <i>Wardley</i>, decisión ágil con <i>OODA</i> de Boyd, reducción de sesgos con <i>Pre-Mortem</i> de Klein, mejora continua con <i>AAR</i> del US Army, y comprensión profunda con <i>Feynman</i>). Se seleccionan por su <i>baja popularidad en entornos comerciales tradicionales</i> pero alta eficacia práctica.</p>
+    </section>
+
+    <!-- 4) Mini-tool: convertir un capítulo del libro en plan de 1 página -->
+    <section class="card">
+      <h2>Convierte un capítulo del libro en un plan de 1 página</h2>
+      <div class="grid">
+        <label>Título del capítulo
+          <input id="cap" placeholder="p.ej., Due Diligence de Proveedor" style="width:100%;margin-top:6px;padding:10px;border-radius:8px;border:1px solid #26384f;background:#0b1320;color:#eaf2ff">
+        </label>
+        <label>Decisión a tomar (OODA)
+          <input id="dec" placeholder="p.ej., ¿Emitir LOI esta semana?" style="width:100%;margin-top:6px;padding:10px;border-radius:8px;border:1px solid #26384f;background:#0b1320;color:#eaf2ff">
+        </label>
+        <label>Riesgo clave (Pre-Mortem)
+          <input id="risk" placeholder="p.ej., Falla de QA/QC en origen" style="width:100%;margin-top:6px;padding:10px;border-radius:8px;border:1px solid #26384f;background:#0b1320;color:#eaf2ff">
+        </label>
+        <button class="btn" id="gen">Generar plan (copiar)</button>
+        <textarea id="out" rows="6" style="width:100%;padding:12px;border-radius:10px;border:1px solid #26384f;background:#0b1320;color:#eaf2ff"></textarea>
+      </div>
+    </section>
+
+    <!-- 5) CTA final -->
+    <section class="card">
+      <h2>¿Listo para aplicarlo en tu operación?</h2>
+      <p>Accede al <a href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">Libro de Minería</a> y agenda una sesión con Abraxas para convertirlo en pipeline real (LOIs, DD técnica, QA/QC, compliance, logística, pricing).</p>
+      <div class="cta">
+        <a class="btn primary" href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">Leer el Libro</a>
+        <a class="btn" href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">Contactar Abraxas Group</a>
+      </div>
+    </section>
+
+    <footer>
+      © Abraxas Group — “Donde el Riesgo encuentra la Oportunidad”. Esta publicación prioriza métodos reales y verificados. Al compartir, deja los enlaces al libro y a la web.
+    </footer>
+  </div>
+
+<script>
+  // Progreso de checklist
+  const checks = Array.from(document.querySelectorAll('#steps input[type="checkbox"]'));
+  const bar = document.getElementById('bar');
+  const k1 = document.getElementById('kpi1');
+  const k2 = document.getElementById('kpi2');
+  const k3 = document.getElementById('kpi3');
+  const k4 = document.getElementById('kpi4');
+  function updateProgress(){
+    const total = checks.length, done = checks.filter(c=>c.checked).length;
+    const pct = Math.round((done/total)*100);
+    bar.style.width = pct+'%';
+    k1.textContent = pct + '%';
+    k2.textContent = String(done);
+    k3.textContent = String(Math.max(0, done-1));
+    k4.textContent = String(done);
+  }
+  checks.forEach(c=>c.addEventListener('change', updateProgress));
+  updateProgress();
+
+  // Generador de plan 1-página (copiable)
+  const cap = document.getElementById('cap');
+  const dec = document.getElementById('dec');
+  const risk = document.getElementById('risk');
+  const out = document.getElementById('out');
+  document.getElementById('gen').addEventListener('click', ()=>{
+    const txt = `Plan 1-página — ${cap.value||'Capítulo'}\n`+
+      `Wardley: posiciona actores y componentes (¿qué es ventaja vs. commodity?).\n`+
+      `OODA: decisión clave ➜ ${dec.value||'definir'} (prueba en 7 días con señales de mercado).\n`+
+      `Pre-Mortem: riesgo #1 ➜ ${risk.value||'especificar'} (mitigación: QA/QC + escrow + cláusulas).\n`+
+      `AAR (semanal): qué esperábamos / qué pasó / aprendizajes / próximos pasos.\n`+
+      `Feynman: explica el capítulo en 3 frases entendibles para un cliente.`;
+    out.value = txt;
+    navigator.clipboard.writeText(txt).catch(()=>{});
+  });
+</script>
+</body>
+</html>
