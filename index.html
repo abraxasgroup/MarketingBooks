@@ -3,108 +3,198 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Due Diligence Minera — Lead Magnet + Mentoría | Abraxas Group</title>
-<meta name="description" content="Checklist interactivo de Due Diligence Minera. Descargá el PDF gratis y agendá mentoría paga por reunión para llevar tu operación a resultados.">
-<meta property="og:title" content="Due Diligence Minera — Abraxas Group">
-<meta property="og:description" content="Checklist interactivo + plan 1 página. PDF gratis local + mentoría paga.">
-<meta property="og:type" content="website">
+<title>Abraxas Group — Due Diligence Minera | Checklist + Mentoría</title>
+<meta name="description" content="Landing interactiva de Abraxas Group: checklist de Due Diligence Minera, generador de 1-página y PDFs gratis. Reservá mentoría por WhatsApp.">
+<meta property="og:title" content="Abraxas Group — Due Diligence Minera" />
+<meta property="og:description" content="Checklist + Generador 1-página + PDFs gratis. Mentoría paga por reunión." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0b0f14" />
 <style>
-  :root {
-    --bg:#05070b; --ink:#e8f0ff; --muted:#9fb0c6; --cta:#ffd166;
-    --card:#121822; --card2:#0d1520; --accent:#06d6a0; --danger:#ff6b6b;
+  /* ======= BRAND THEME (Universo - Morados/Azules - Dorados) ======= */
+  :root{
+    --space:#06070c;            /* negro universo */
+    --ink:#e8ecf8;              /* texto */
+    --muted:#a0b1c9;            /* secundarios */
+    --card:#0c1220cc;           /* glass card */
+    --card-b:#0a0f1bcc;
+    --blue:#4da3ff;             /* acento azul */
+    --violet:#7b61ff;           /* acento morado */
+    --gold:#f5c857;             /* dorado */
+    --gold2:#d9a93d;
+    --ok:#6be675; --warn:#ffcd57; --danger:#ff6b6b;
   }
-  html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden}
-  /* Capa "galaxia" */
+
+  /* Reset básico */
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    min-height:100vh;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,sans-serif;
+    color:var(--ink);
+    background: var(--space);
+    overflow-x:hidden;
+  }
+
+  /* ======= FONDO GALAXIA (nebulosa + estrellas sutil) ======= */
   body::before, body::after{
-    content:""; position:fixed; inset:-10vmax; pointer-events:none; z-index:-2;
-    background:
-      radial-gradient(1200px 800px at 10% 15%, #18233b 0%, transparent 60%),
-      radial-gradient(900px 700px at 80% 10%, #1b1036 0%, transparent 60%),
-      radial-gradient(900px 600px at 30% 85%, #0f2a3a 0%, transparent 60%),
-      linear-gradient(180deg,#06080e 0%, #0b0f14 55%, #05070b 100%);
-    filter:saturate(1.2) brightness(0.95);
+    content:""; position:fixed; inset:-12vmax; pointer-events:none;
+    z-index:-2;
   }
-  /* Estrellas sutiles */
+  /* Nebulosas */
+  body::before{
+    background:
+      radial-gradient(1200px 800px at 12% 10%, rgba(17,27,60,.9) 0%, rgba(17,27,60,0) 60%),
+      radial-gradient(1000px 700px at 82% 15%, rgba(28,8,78,.85) 0%, rgba(28,8,78,0) 65%),
+      radial-gradient(900px 600px at 30% 85%, rgba(0,64,105,.7) 0%, rgba(0,64,105,0) 60%),
+      linear-gradient(180deg,#05060a 0%, #0b0f14 60%, #06070c 100%);
+    filter:saturate(1.15) brightness(.98);
+  }
+  /* Estrellas */
   body::after{
     z-index:-1; opacity:.35;
     background-image:
-      radial-gradient(#ffffffa8 1px, transparent 1px),
+      radial-gradient(#ffffffaa 1px, transparent 1px),
       radial-gradient(#a4c6ff88 1px, transparent 1px),
-      radial-gradient(#ffffff77 1px, transparent 1px);
+      radial-gradient(#ffffff66 1px, transparent 1px);
     background-size: 3px 3px, 2px 2px, 1px 1px;
-    background-position: 0 0, 10px 20px, 25px 15px;
-    animation: twinkle 12s linear infinite;
+    background-position: 0 0, 18px 22px, 40px 8px;
+    animation: twinkle 16s linear infinite;
   }
   @keyframes twinkle{0%{opacity:.25}50%{opacity:.45}100%{opacity:.25}}
-  a{color:var(--cta);text-decoration:none} a:hover{text-decoration:underline}
-  header{padding:28px 20px;text-align:center}
-  .wrap{max-width:980px;margin:0 auto;padding:0 20px 48px}
-  .badge{display:inline-block;border:1px solid #233242;padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.3px;background:#0a1320aa}
-  h1{margin:10px 0 6px;font-size:30px}
-  p.lead{color:var(--muted);margin:0 auto 14px;max-width:760px}
-  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid #1d2a39;border-radius:16px;padding:16px;margin-top:18px}
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
-  .kpi{background:#0c1420ba;border:1px solid #1d2a39;border-radius:12px;padding:10px;text-align:center}
-  .kpi b{display:block;font-size:18px}
-  .cta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0;justify-content:center}
-  .btn{background:linear-gradient(180deg,#12253a,#0e1d2e);border:1px solid #27435f;border-radius:12px;padding:10px 14px;color:#e7f1ff;font-weight:600;display:inline-flex;gap:8px;align-items:center}
-  .btn:hover{filter:brightness(1.07)}
-  .btn.primary{background:linear-gradient(180deg,#204a3a,#173a2e);border-color:#2e6d58}
-  .btn.warn{background:linear-gradient(180deg,#3a2020,#2e1717);border-color:#6d2e2e}
+
+  /* ======= UTILIDADES ======= */
+  a{color:var(--gold); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 56px}
+  .flex{display:flex;align-items:center;gap:12px}
+  .center{text-align:center}
   .muted{color:var(--muted)}
-  .pill{display:inline-block;background:#0c1a1a;color:#92ffe3;border:1px solid #114444;border-radius:999px;font-size:12px;padding:3px 8px;margin-left:8px}
+  .hidden{display:none !important}
+
+  /* ======= CARDS con borde dorado (gradient-stroke) ======= */
+  .card{
+    position:relative; padding:18px; border-radius:18px;
+    background:linear-gradient(180deg,var(--card),var(--card-b));
+    isolation:isolate;
+  }
+  .card::before{
+    content:""; position:absolute; inset:0; border-radius:18px; z-index:-1;
+    padding:1px; background:linear-gradient(135deg, #ffe9a6, #caa24a, #8b6b1f, #ffe08a);
+    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude;
+  }
+  .card + .card{margin-top:16px}
+
+  /* ======= HEADER / HERO ======= */
+  header{padding:34px 20px 10px}
+  .badge{
+    display:inline-flex; gap:8px; align-items:center;
+    padding:6px 12px; border-radius:999px; font-size:12px; letter-spacing:.3px;
+    background:linear-gradient(180deg,rgba(10,16,32,.75),rgba(9,14,28,.6));
+    border:1px solid rgba(80,95,130,.35); color:var(--muted)
+  }
+  h1{
+    margin:14px auto 8px; font-size:42px; line-height:1.1;
+    background:linear-gradient(90deg,#b59d46 0%,#e6cf75 20%,#7b61ff 55%,#4da3ff 90%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    text-shadow:0 0 20px rgba(245,200,87,.12);
+    max-width:900px;
+  }
+  p.lead{margin:0 auto; color:var(--muted); max-width:880px; font-size:17px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:18px 0 4px}
+  .btn{
+    display:inline-flex; gap:10px; align-items:center; padding:12px 16px;
+    border-radius:12px; font-weight:700; color:#fff;
+    background:linear-gradient(180deg,#1a2f4a,#111d30);
+    border:1px solid #27435f; box-shadow:0 0 0 0 rgba(245,200,87,0);
+    transition:transform .15s ease, box-shadow .25s ease, filter .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px); filter:brightness(1.07)}
+  .btn.gold{
+    background:linear-gradient(180deg,#563f12,#2e230b);
+    border-color:#a07a1f;
+    box-shadow:0 0 0 0 rgba(245,200,87,.0);
+  }
+  .btn.gold:hover{box-shadow:0 0 24px 0 rgba(245,200,87,.25)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+  .kpi{background:linear-gradient(180deg,rgba(10,18,32,.6),rgba(7,13,23,.6));border:1px solid #203043;border-radius:14px;padding:10px;text-align:center}
+  .kpi b{display:block;font-size:18px}
+
+  /* ======= SECCIONES ======= */
+  h2{font-size:22px;margin:0 0 8px}
+  .pill{display:inline-block;font-size:12px;border:1px solid #28425a;color:#9fd0ff;border-radius:999px;padding:3px 8px;margin-left:8px;background:#0a1622}
+
+  /* Checklist */
+  .check{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:10px;border:1px dashed #203043;margin:8px 0;background:#08101bcc}
+  input[type="checkbox"]{accent-color:#7b61ff; width:18px;height:18px;margin-top:2px}
   .progress{height:12px;background:#0c121a;border:1px solid #1d2a39;border-radius:999px;overflow:hidden;margin-top:10px}
-  .bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#49f7c8)}
-  .score{font-weight:700}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .row>div{display:flex;flex-direction:column;gap:6px}
-  input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #26384f;background:#0b1320;color:#eaf2ff}
+  .bar{height:100%;width:0%;background:linear-gradient(90deg,#06d6a0,#49f7c8)}
+
+  /* Split layout */
+  .split{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+  @media (max-width:980px){.split{grid-template-columns:1fr}}
+
+  /* Form fields */
+  input, select, textarea{
+    width:100%; padding:12px; border-radius:10px; border:1px solid #26384f;
+    background:#0b1320; color:#eaf2ff; font-size:14px;
+  }
   label{font-size:14px}
-  .check{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:10px;border:1px dashed #203043;margin:8px 0;background:#08101b99}
-  .note{font-size:12px;color:#9fb0c6}
-  .split{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
-  @media (max-width:900px){.split,.row{grid-template-columns:1fr}}
-  footer{margin-top:28px;color:#8ea4bd;text-align:center;font-size:12px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:720px){.row{grid-template-columns:1fr}}
+
+  /* Micro-interacciones suaves */
+  .reveal{opacity:0; transform:translateY(10px); transition:opacity .45s ease, transform .45s ease}
+  .reveal.on{opacity:1; transform:none}
+
+  /* Toast */
+  .toast{
+    position:fixed; right:16px; bottom:16px; z-index:99;
+    background:linear-gradient(180deg,#182437,#0e1829); color:#e7f1ff;
+    border:1px solid #2a4663; border-radius:12px; padding:10px 12px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+    display:flex; gap:8px; align-items:center; font-size:14px
+  }
 </style>
 </head>
 <body>
-  <header>
+  <header class="center">
     <span class="badge">Abraxas Group · Lead Magnet + Mentoría Paga</span>
-    <h1>Due Diligence Minera — Checklist Interactivo + Plan 1-Página</h1>
-    <p class="lead">Descargá el PDF gratuito y, si querés aplicarlo a tu caso, agendá una <b>mentoría paga por reunión</b>.</p>
+    <h1>Abrimos la galaxia del negocio minero</h1>
+    <p class="lead">Checklist interactivo de Due Diligence + generador de <b>1-página</b> y <b>PDFs gratis</b>. Si querés bajarlo a tu caso, reservás una <b>mentoría paga por reunión</b> (WhatsApp).</p>
     <div class="cta">
-      <!-- SOLO estos 2 botones arriba (como pediste) -->
-      <a class="btn primary" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentor%C3%ADa%20paga%20sobre%20Due%20Diligence%20Minera." target="_blank" rel="noopener">💬 Reservar mentoría (WhatsApp)</a>
+      <a class="btn gold" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentor%C3%ADa%20paga%20sobre%20Due%20Diligence%20Minera." target="_blank" rel="noopener">💬 Reservar mentoría (WhatsApp)</a>
       <a class="btn" href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">🌐 Abraxas Group</a>
     </div>
-    <div class="kpis">
-      <div class="kpi"><b id="kpi1">0%</b><span class="muted">Checklist completado</span></div>
-      <div class="kpi"><b id="kpi2">0/6</b><span class="muted">Puntos DD</span></div>
-      <div class="kpi"><b id="kpi3">0</b><span class="muted">Red flags</span></div>
-      <div class="kpi"><b id="kpi4">0</b><span class="muted">OKs críticos</span></div>
+    <div class="wrap">
+      <div class="kpis">
+        <div class="kpi"><b id="kpi1">0%</b><span class="muted">Checklist completado</span></div>
+        <div class="kpi"><b id="kpi2">0/6</b><span class="muted">Puntos DD</span></div>
+        <div class="kpi"><b id="kpi3">0</b><span class="muted">Red flags</span></div>
+        <div class="kpi"><b id="kpi4">0</b><span class="muted">OKs críticos</span></div>
+      </div>
     </div>
   </header>
 
-  <div class="wrap">
-    <!-- 1) Qué valida la DD (en simple) -->
-    <section class="card">
+  <main class="wrap">
+    <!-- Qué valida la DD -->
+    <section class="card reveal">
       <h2>Qué valida la Due Diligence <span class="pill">en simple</span></h2>
-      <p class="muted">Propiedad real del activo, respaldo técnico (ensayos/geo y, si existe, NI&nbsp;43-101 o JORC), permisos/ambiental y protección del fee (NDA/NCNDA + IMFPA). Sin humo.</p>
+      <p class="muted">Propiedad real del activo, respaldo técnico (ensayos/geología y, si existe, NI&nbsp;43-101 o JORC), permisos/ambiental y protección del fee (NDA/NCNDA + IMFPA). Jerarquía visual clara y CTA visible primero para impulsar la acción. <span class="muted">*Buenas prácticas: jerarquía y “above the fold” influyen en el engagement y el scroll.*</span></p>
     </section>
 
-    <!-- 2) Checklist súper fácil (6 puntos) -->
-    <section class="card">
+    <!-- Checklist -->
+    <section class="card reveal">
       <h2>Checklist de Due Diligence (rápido)</h2>
-      <div class="note">Marcá lo que tenés. La barra y el score se actualizan en vivo.</div>
+      <p class="muted">Marcá lo que tenés. La barra y el score se actualizan en vivo.</p>
       <div id="list"></div>
       <div class="progress" aria-label="Progreso"><div class="bar" id="bar"></div></div>
-      <p>Score: <span class="score" id="score">0/6</span> · <span id="veredict" class="muted">Completá para ver tu estado.</span></p>
+      <p>Score: <b id="score">0/6</b> · <span id="veredict" class="muted">Completá para ver tu estado.</span></p>
     </section>
 
-    <!-- 3) Generador 1-pager (fricción mínima) -->
-    <section class="card split">
+    <!-- Generador 1-pager -->
+    <section class="card split reveal">
       <div>
-        <h2>Tu Plan de 1-Página (en 3 clics)</h2>
+        <h2>Tu Plan de 1-Página (3 clics)</h2>
         <div class="row">
           <div><label>Proyecto (opcional)<input id="p_name" placeholder="p.ej., Cobre Andino — Perú"></label></div>
           <div><label>Jurisdicción (opcional)<input id="p_jur" placeholder="País/Provincia"></label></div>
@@ -146,47 +236,55 @@
           <button class="btn" id="gen">🧩 Generar resumen</button>
           <button class="btn" id="copy">📋 Copiar</button>
         </div>
-        <textarea id="out" rows="8" placeholder="Tu 1-pager aparecerá aquí…"></textarea>
-
-        <p class="note">¿Querés que lo convirtamos en un plan real y protejamos tu fee? Pedí una mentoría (paga por reunión).</p>
+        <textarea id="out" rows="9" placeholder="Tu 1-pager aparecerá aquí…"></textarea>
+        <p class="muted" style="margin-top:8px">*Tip: mantené contraste alto para lectura cómoda (mínimo AA).*</p>
       </div>
 
       <aside>
-        <h3>¿Listo para mentoría?</h3>
-        <p>Aplicamos este 1-pager a tu caso, ordenamos documentos y definimos los próximos 7 días.</p>
+        <h2>¿Listo para mentoría?</h2>
+        <p>Aplicamos tu 1-pager a un caso real, cerramos gaps y definimos los próximos 7 días.</p>
         <div class="cta">
-          <a class="btn primary" href="https://wa.me/543417400299?text=Quiero%20mentoria%20sobre%20Due%20Diligence" target="_blank" rel="noopener">💬 Reservar mentoría (WhatsApp)</a>
+          <a class="btn gold" href="https://wa.me/543417400299?text=Quiero%20mentoria%20sobre%20Due%20Diligence" target="_blank" rel="noopener">💬 Reservar mentoría (WhatsApp)</a>
         </div>
-        <details>
-          <summary>Incluye</summary>
-          <ul class="muted">
-            <li>Validación de propiedad y trazabilidad.</li>
-            <li>Revisión técnica (ensayos / NI 43-101 / JORC).</li>
-            <li>Permisos/ambiental y orden correcto de divulgación.</li>
-            <li>Protección de fee (NDA/NCNDA + IMFPA) y señales de bypass.</li>
-          </ul>
-        </details>
+        <ul class="muted" style="margin:10px 0 0 18px">
+          <li>Propiedad y trazabilidad.</li>
+          <li>Revisión técnica (ensayos / NI 43-101 / JORC).</li>
+          <li>Permisos/ambiental y orden correcto de divulgación.</li>
+          <li>Protección de fee (NDA/NCNDA + IMFPA) y señales de bypass.</li>
+        </ul>
       </aside>
     </section>
 
-    <!-- 4) PDFs + CTA final (WhatsApp) -->
-    <section class="card">
-      <h2>Descargá el PDF y pasemos a resultados</h2>
+    <!-- PDFs + CTA final -->
+    <section class="card reveal">
+      <h2>Descargas</h2>
+      <p class="muted">PDFs gratuitos para preparación. Si falta alguno, te lo enviamos por WhatsApp.</p>
       <div class="cta">
         <a class="btn" id="pdfEs" href="downloads/como-ser-un-intermediario-mineria.pdf" download>📕 PDF (ES) — descarga directa</a>
         <a class="btn" id="pdfEn" href="downloads/how-to-be-an-intermediary-mining-business.pdf" download>📕 PDF (EN) — direct download</a>
-        <a class="btn warn" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20coordinar%20una%20reuni%C3%B3n%20paga%20de%20mentoria%20sobre%20DD%20Minera." target="_blank" rel="noopener">💼 Reservar mentoría (WhatsApp)</a>
+        <a class="btn gold" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20coordinar%20una%20reuni%C3%B3n%20paga%20de%20mentoria%20sobre%20DD%20Minera." target="_blank" rel="noopener">💼 Reservar mentoría (WhatsApp)</a>
       </div>
-      <p class="note">La mentoría es de pago por reunión. El PDF es gratuito como preparación.</p>
     </section>
+  </main>
 
-    <footer>
-      © Abraxas Group — “Donde el Riesgo encuentra la Oportunidad”.
-    </footer>
+  <footer class="center" style="padding:20px 12px 40px;color:#8ea4bd">
+    © Abraxas Group — “Donde el Riesgo encuentra la Oportunidad”.
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast hidden" role="alert" aria-live="polite">
+    <span>⚠️ El PDF ES no está disponible aún. Podemos enviártelo por WhatsApp.</span>
+    <a class="btn gold" style="padding:6px 10px" target="_blank" rel="noopener"
+       href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20enviame%20el%20PDF%20ES%20del%20libro%2C%20por%20favor.">Pedir por WhatsApp</a>
   </div>
 
 <script>
-  // ====== Checklist (6 ítems, simple) ======
+  /* ====== Reveal on scroll (micro-interacción suave) ====== */
+  const obs = new IntersectionObserver((e)=>e.forEach(x=>x.target.classList.toggle('on', x.isIntersecting)),
+    {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  /* ====== Checklist ====== */
   const items = [
     { t:'Título o derecho de concesión (al menos evidencia)', crit:true },
     { t:'Ensayos/Informe técnico básico (laboratorio identificado)', crit:true },
@@ -199,7 +297,7 @@
   items.forEach((it)=>{
     const row = document.createElement('label');
     row.className = 'check';
-    row.innerHTML = `<input type="checkbox"><div><b>${it.t}</b><br><span class="note">${it.crit? 'Crítico':'Recomendado'}</span></div>`;
+    row.innerHTML = `<input type="checkbox"><div><b>${it.t}</b><br><span class="muted">${it.crit? 'Crítico':'Recomendado'}</span></div>`;
     list.appendChild(row);
   });
 
@@ -213,38 +311,35 @@
 
   function updateProgress(){
     const checks = Array.from(list.querySelectorAll('input[type="checkbox"]'));
-    const total = checks.length;
-    const done = checks.filter(c=>c.checked).length;
-    const critCount =  items.filter(i=>i.crit).length;
+    const total = checks.length, done = checks.filter(c=>c.checked).length;
+    const critCount = items.filter(i=>i.crit).length;
     const doneCrit = items.filter((it,idx)=>it.crit && checks[idx].checked).length;
     const redFlags = critCount - doneCrit;
     const pct = Math.round((done/total)*100);
-    bar.style.width = pct+'%';
+    bar.style.width = pct + '%';
     k1.textContent = pct + '%';
     k2.textContent = `${done}/${total}`;
     k3.textContent = String(redFlags);
     k4.textContent = String(doneCrit);
     scoreEl.textContent = `${done}/${total}`;
-    if (redFlags >= 2) veredict.innerHTML = '⚠️ Riesgo alto: faltan críticos. Recomendado: Mentoría antes de avanzar.';
-    else if (redFlags === 1) veredict.innerHTML = '🟡 Riesgo medio: resolvé el crítico pendiente.';
-    else if (done >= 5) veredict.innerHTML = '🟢 Perfil sólido: listo para revisión controlada.';
-    else veredict.innerHTML = 'ℹ️ Seguís cargando: completá el checklist.';
+    if (redFlags >= 2) veredict.textContent = 'Riesgo alto: faltan críticos. Recomendado: Mentoría antes de avanzar.';
+    else if (redFlags === 1) veredict.textContent = 'Riesgo medio: resolvé el crítico pendiente.';
+    else if (done >= 5) veredict.textContent = 'Perfil sólido: listo para revisión controlada.';
+    else veredict.textContent = 'Completá para ver tu estado.';
   }
-  list.addEventListener('change', updateProgress);
-  updateProgress();
+  list.addEventListener('change', updateProgress); updateProgress();
 
-  // ====== Generador 1-Pager ======
-  const el = id => document.getElementById(id);
+  /* ====== Generador 1-pager ====== */
+  const $ = (id)=>document.getElementById(id);
   function buildOnePager(){
-    const name = el('p_name').value || 'Proyecto Minero';
-    const jur  = el('p_jur').value || 'Jurisdicción';
-    const docs = el('p_docs').value;
-    const std  = el('p_std').value;
-    const env  = el('p_env').value;
-    const risk = el('p_risk').value;
+    const name = $('p_name').value || 'Proyecto Minero';
+    const jur  = $('p_jur').value || 'Jurisdicción';
+    const docs = $('p_docs').value;
+    const std  = $('p_std').value;
+    const env  = $('p_env').value;
+    const risk = $('p_risk').value;
 
-    const txt =
-`1-Pager de Due Diligence — ${name}
+    return `1-Pager de Due Diligence — ${name}
 Jurisdicción: ${jur}
 
 Documentación base: ${docs}
@@ -259,25 +354,32 @@ Protección de fee: IMFPA ligado al contrato principal.
 
 Contacto Abraxas
 • o.chinchilla@abraxas-group.lat · +54 341 740 0299`;
-    return txt;
   }
-  el('gen').addEventListener('click', ()=>{ el('out').value = buildOnePager(); });
-  el('copy').addEventListener('click', ()=>{
-    const txt = el('out').value || buildOnePager();
-    navigator.clipboard.writeText(txt).catch(()=>{});
-  });
+  $('gen').addEventListener('click', ()=>{ $('out').value = buildOnePager(); });
+  $('copy').addEventListener('click', ()=>{ navigator.clipboard.writeText($('out').value || buildOnePager()).catch(()=>{}); });
 
-  // ====== Fallback a RAW si el PDF aún no está en Pages ======
+  /* ====== Verificación PDFs: fallback RAW y WhatsApp ====== */
   async function ensurePdf(id, rawUrl){
     const a = document.getElementById(id);
     try{
-      const r = await fetch(a.getAttribute('href'), { method: 'HEAD' });
-      if (!r.ok) { a.href = rawUrl; a.removeAttribute('download'); }
-    }catch(e){ a.href = rawUrl; a.removeAttribute('download'); }
+      const r = await fetch(a.getAttribute('href'), { method:'HEAD' });
+      if(!r.ok){ a.href = rawUrl; a.removeAttribute('download'); }
+    }catch(e){
+      a.href = rawUrl; a.removeAttribute('download');
+    }
   }
-  // Cambiá el owner/repo si tu repo no es este:
-  ensurePdf('pdfEs','https://github.com/abraxasgroup/MarketingBooks/raw/main/downloads/como-ser-un-intermediario-mineria.pdf');
+  // Cambiá 'abraxasgroup/MarketingBooks' si tu repo es otro:
+  ensurePdf('pdfEs','https://github.com/abraxasgroup/MarketingBooks/raw/main/downloads/como-ser-un-intermediario-mineria.pdf')
+    .then(async ()=>{
+      // Si tampoco existe en RAW, mostramos toast para WhatsApp
+      const a = document.getElementById('pdfEs');
+      try{
+        const r = await fetch(a.href, { method:'HEAD' });
+        if(!r.ok){ document.getElementById('toast').classList.remove('hidden'); }
+      }catch(e){ document.getElementById('toast').classList.remove('hidden'); }
+    });
   ensurePdf('pdfEn','https://github.com/abraxasgroup/MarketingBooks/raw/main/downloads/how-to-be-an-intermediary-mining-business.pdf');
+
 </script>
 </body>
 </html>
