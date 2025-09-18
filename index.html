@@ -10,28 +10,18 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0b0f14">
 <style>
-  /* ======= PALLETA ABRAXAS ======= */
   :root{
-    --space:#05060a;      /* negro universo */
-    --ink:#ecf0ff;        /* texto principal */
-    --muted:#9fb0c9;      /* texto secundario */
-    --glass:#0b1222d0;    /* glass */
-    --glass2:#0a1120b5;
-    --violet:#7b61ff;     /* morado acento */
-    --blue:#4da3ff;       /* azul acento */
-    --gold:#f5c857;       /* dorado principal */
-    --gold2:#caa13f;      /* dorado oscuro */
+    --space:#05060a; --ink:#ecf0ff; --muted:#9fb0c9;
+    --glass:#0b1222d0; --glass2:#0a1120b5;
+    --violet:#7b61ff; --blue:#4da3ff;
+    --gold:#f5c857; --gold2:#caa13f;
     --ok:#6be675; --warn:#ffd166; --danger:#ff6b6b;
   }
-
-  /* Reset */
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
   body{
     min-height:100vh; color:var(--ink);
     font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     background: var(--space) url("assets/universo.png") center/cover fixed no-repeat;
-    /* overlay de nebulosa para legibilidad */
     position:relative; overflow-x:hidden;
   }
   body::before{
@@ -43,7 +33,6 @@
       linear-gradient(180deg,rgba(5,6,10,.65) 0%, rgba(10,14,22,.75) 55%, rgba(5,6,10,.80) 100%);
     filter:saturate(1.12) contrast(1.02);
   }
-  /* Estrellitas sutiles */
   body::after{
     content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.32;
     background-image:
@@ -56,14 +45,12 @@
   }
   @keyframes twinkle{0%{opacity:.22}50%{opacity:.4}100%{opacity:.22}}
 
-  /* Contenedor */
   .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 
-  /* ======= HERO ======= */
   header{padding:38px 0 16px;text-align:center}
   .badge{
-    display:inline-flex; gap:8px; align-items:center;
-    padding:6px 12px; border-radius:999px; font-size:12px; letter-spacing:.3px;
+    display:inline-flex; gap:8px; align-items:center; padding:6px 12px;
+    border-radius:999px; font-size:12px; letter-spacing:.3px;
     background:linear-gradient(180deg,rgba(10,16,32,.75),rgba(9,14,28,.6));
     border:1px solid rgba(80,95,130,.35); color:var(--muted)
   }
@@ -74,7 +61,6 @@
     text-shadow:0 0 18px rgba(245,200,87,.12);
   }
   p.lead{margin:0 auto 12px; color:var(--muted); max-width:900px; font-size:18px}
-
   .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:18px 0 0}
   .btn{
     display:inline-flex; gap:10px; align-items:center; padding:12px 18px;
@@ -84,13 +70,9 @@
     transition:transform .15s ease, box-shadow .25s ease, filter .15s ease;
   }
   .btn:hover{transform:translateY(-1px); filter:brightness(1.07)}
-  .btn.gold{
-    background:linear-gradient(180deg,#6a4a12,#2e230b);
-    border-color:#a07a1f; box-shadow:0 0 0 0 rgba(245,200,87,.0);
-  }
+  .btn.gold{background:linear-gradient(180deg,#6a4a12,#2e230b); border-color:#a07a1f}
   .btn.gold:hover{box-shadow:0 0 30px 0 rgba(245,200,87,.25)}
 
-  /* ======= TARJETAS (glass + borde dorado) ======= */
   .section{margin:22px 0}
   .card{
     position:relative; padding:22px 18px; border-radius:18px;
@@ -106,37 +88,22 @@
   h2{font-size:24px;margin:0 0 8px}
   .pill{display:inline-block;font-size:12px;border:1px solid #28425a;color:#cfe3ff;border-radius:999px;padding:3px 8px;margin-left:8px;background:#0a1622}
   .muted{color:var(--muted)}
-
-  /* KPIs */
   .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
   .kpi{background:linear-gradient(180deg,rgba(10,18,32,.6),rgba(7,13,23,.6));border:1px solid #203043;border-radius:14px;padding:10px;text-align:center}
   .kpi b{display:block;font-size:18px}
 
-  /* Checklist */
   .check{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:10px;border:1px dashed #203043;margin:8px 0;background:#08101bcc}
   input[type="checkbox"]{accent-color:#7b61ff;width:18px;height:18px;margin-top:2px}
   .progress{height:12px;background:#0c121a;border:1px solid #1d2a39;border-radius:999px;overflow:hidden;margin-top:10px}
   .bar{height:100%;width:0%;background:linear-gradient(90deg,#06d6a0,#49f7c8)}
   #score{font-weight:800}
 
-  /* Split layout */
   .split{display:grid;grid-template-columns:1.12fr .88fr;gap:16px}
   @media (max-width:1000px){.split{grid-template-columns:1fr}}
-
-  /* Inputs */
-  input,select,textarea{
-    width:100%; padding:12px; border-radius:10px; border:1px solid #26384f;
-    background:#0b1320; color:#eaf2ff; font-size:15px;
-  }
+  input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #26384f;background:#0b1320;color:#eaf2ff;font-size:15px}
   label{font-size:14px}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   @media (max-width:720px){.row{grid-template-columns:1fr}}
-
-  /* Reveal */
-  .reveal{opacity:0; transform:translateY(10px); transition:opacity .45s ease, transform .45s ease}
-  .reveal.on{opacity:1; transform:none}
-
-  /* Footer firma */
   footer{padding:28px 12px 44px;text-align:center;color:#cfd7ea}
   .sig{
     margin-top:8px; font-weight:900; letter-spacing:.3px;
@@ -144,30 +111,22 @@
     -webkit-background-clip:text; background-clip:text; color:transparent;
     text-shadow:0 0 18px rgba(245,200,87,.12);
   }
-
-  /* Toast */
-  .toast{
-    position:fixed; right:16px; bottom:16px; z-index:99;
-    background:linear-gradient(180deg,#182437,#0e1829); color:#e7f1ff;
-    border:1px solid #2a4663; border-radius:12px; padding:10px 12px; box-shadow:0 10px 30px rgba(0,0,0,.35);
-    display:flex; gap:8px; align-items:center; font-size:14px
-  }
+  .toast{position:fixed; right:16px; bottom:16px; z-index:99; background:linear-gradient(180deg,#182437,#0e1829); color:#e7f1ff; border:1px solid #2a4663; border-radius:12px; padding:10px 12px; box-shadow:0 10px 30px rgba(0,0,0,.35); display:flex; gap:8px; align-items:center; font-size:14px}
   .hidden{display:none!important}
+  .reveal{opacity:0; transform:translateY(10px); transition:opacity .45s ease, transform .45s ease}
+  .reveal.on{opacity:1; transform:none}
 </style>
 </head>
 <body>
-  <!-- HERO -->
   <header>
     <div class="wrap">
       <span class="badge">Abraxas Group · Lead Magnet + Mentoría Paga</span>
       <h1>Abrimos la galaxia de los negocios mineros</h1>
       <p class="lead">Checklist interactivo de Due Diligence + <b>generador de 1-página</b> y <b>PDFs gratis</b>. Si querés bajarlo a tu caso, reservás una <b>mentoría paga por reunión</b> (WhatsApp).</p>
-
       <div class="cta">
         <a class="btn gold" href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20quiero%20agendar%20una%20mentor%C3%ADa%20paga%20sobre%20Due%20Diligence%20Minera." target="_blank" rel="noopener">💬 Reservar mentoría (WhatsApp)</a>
         <a class="btn" href="https://www.abraxas-group.lat/" target="_blank" rel="noopener">🌐 Abraxas Group</a>
       </div>
-
       <div class="kpis">
         <div class="kpi"><b id="kpi1">0%</b><span class="muted">Checklist completado</span></div>
         <div class="kpi"><b id="kpi2">0/6</b><span class="muted">Puntos DD</span></div>
@@ -178,13 +137,11 @@
   </header>
 
   <main class="wrap">
-    <!-- Qué valida -->
     <section class="section card reveal">
       <h2>Qué valida la Due Diligence <span class="pill">en simple</span></h2>
       <p class="muted">Propiedad real del activo, respaldo técnico (ensayos/geología y, si existe, NI&nbsp;43-101 o JORC), permisos/ambiental y protección del fee (NDA/NCNDA + IMFPA). Cero humo: datos, orden y decisión.</p>
     </section>
 
-    <!-- Checklist -->
     <section class="section card reveal">
       <h2>Checklist de Due Diligence (rápido)</h2>
       <p class="muted">Marcá lo que tenés. La barra y el score se actualizan en vivo.</p>
@@ -193,7 +150,6 @@
       <p>Score: <span id="score">0/6</span> · <span id="veredict" class="muted">Completá para ver tu estado.</span></p>
     </section>
 
-    <!-- Generador 1-pager -->
     <section class="section card split reveal">
       <div>
         <h2>Tu Plan de 1-Página (3 clics)</h2>
@@ -256,7 +212,6 @@
       </aside>
     </section>
 
-    <!-- Descargas -->
     <section class="section card reveal">
       <h2>Descargas</h2>
       <p class="muted">PDFs gratuitos para preparación. Si falta alguno, te lo enviamos por WhatsApp.</p>
@@ -273,20 +228,16 @@
     <div class="sig">WeTrade · WeConnect · WeWork — Powered by Abraxas</div>
   </footer>
 
-  <!-- Toast -->
   <div id="toast" class="toast hidden" role="alert" aria-live="polite">
-    <span>⚠️ El PDF ES no está disponible aún. Podemos enviártelo por WhatsApp.</span>
+    <span>⚠️ El PDF ES no está disponible. Podemos enviártelo por WhatsApp.</span>
     <a class="btn gold" style="padding:6px 10px" target="_blank" rel="noopener"
        href="https://wa.me/543417400299?text=Hola%20Abraxas%2C%20enviame%20el%20PDF%20ES%20del%20libro%2C%20por%20favor.">Pedir por WhatsApp</a>
   </div>
 
 <script>
-  /* Reveal on scroll */
-  const obs = new IntersectionObserver((e)=>e.forEach(x=>x.target.classList.toggle('on', x.isIntersecting)),
-    {threshold:.15});
+  const obs = new IntersectionObserver((e)=>e.forEach(x=>x.target.classList.toggle('on', x.isIntersecting)),{threshold:.15});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-  /* Checklist */
   const items = [
     { t:'Título o derecho de concesión (al menos evidencia)', crit:true },
     { t:'Ensayos/Informe técnico básico (laboratorio identificado)', crit:true },
@@ -319,10 +270,8 @@
     const redFlags = critCount - doneCrit;
     const pct = Math.round((done/total)*100);
     bar.style.width = pct + '%';
-    k1.textContent = pct + '%';
-    k2.textContent = `${done}/${total}`;
-    k3.textContent = String(redFlags);
-    k4.textContent = String(doneCrit);
+    k1.textContent = pct + '%'; k2.textContent = `${done}/${total}`;
+    k3.textContent = String(redFlags); k4.textContent = String(doneCrit);
     scoreEl.textContent = `${done}/${total}`;
     if (redFlags >= 2) veredict.textContent = 'Riesgo alto: faltan críticos. Recomendado: Mentoría antes de avanzar.';
     else if (redFlags === 1) veredict.textContent = 'Riesgo medio: resolvé el crítico pendiente.';
@@ -331,16 +280,11 @@
   }
   list.addEventListener('change', updateProgress); updateProgress();
 
-  /* Generador 1-pager */
   const $ = (id)=>document.getElementById(id);
   function buildOnePager(){
     const name = $('p_name').value || 'Proyecto Minero';
     const jur  = $('p_jur').value || 'Jurisdicción';
-    const docs = $('p_docs').value;
-    const std  = $('p_std').value;
-    const env  = $('p_env').value;
-    const risk = $('p_risk').value;
-
+    const docs = $('p_docs').value, std = $('p_std').value, env = $('p_env').value, risk = $('p_risk').value;
     return `1-Pager de Due Diligence — ${name}
 Jurisdicción: ${jur}
 
@@ -360,25 +304,32 @@ Contacto Abraxas
   $('gen').addEventListener('click', ()=>{ $('out').value = buildOnePager(); });
   $('copy').addEventListener('click', ()=>{ navigator.clipboard.writeText($('out').value || buildOnePager()).catch(()=>{}); });
 
-  /* PDFs: fallback RAW y WhatsApp si falta */
+  // --- Verificación PDFs: SOLO considera 404 real ---
   async function ensurePdf(id, rawUrl){
     const a = document.getElementById(id);
     try{
-      const r = await fetch(a.getAttribute('href'), { method:'HEAD' });
-      if(!r.ok){ a.href = rawUrl; a.removeAttribute('download'); }
-      // segunda verificación; si tampoco está, mostramos toast
-      const r2 = await fetch(a.href, { method:'HEAD' });
-      if(!r2.ok){ document.getElementById('toast').classList.remove('hidden'); }
+      const r = await fetch(a.getAttribute('href'), { method:'HEAD', mode:'no-cors' });
+      // Con no-cors no podemos leer status; asumimos OK si no hay excepción.
+      // Segundo intento, ahora sí medimos status contra RAW:
+      const r2 = await fetch(a.getAttribute('href'), { method:'HEAD' });
+      if (r2.status === 404){
+        a.href = rawUrl; a.removeAttribute('download');
+        const r3 = await fetch(a.href, { method:'HEAD' });
+        if (r3.status === 404){ document.getElementById('toast').classList.remove('hidden'); }
+      }
     }catch(e){
+      // Si falla Pages, probamos RAW:
       a.href = rawUrl; a.removeAttribute('download');
-      document.getElementById('toast').classList.remove('hidden');
+      try{
+        const r4 = await fetch(a.href, { method:'HEAD' });
+        if (r4.status === 404){ document.getElementById('toast').classList.remove('hidden'); }
+      }catch(e2){ document.getElementById('toast').classList.remove('hidden'); }
     }
   }
-  /* Cambiá owner/repo si fuese distinto */
+  // Cambiá owner/repo si fuese distinto:
   ensurePdf('pdfEs','https://github.com/abraxasgroup/MarketingBooks/raw/main/downloads/como-ser-un-intermediario-mineria.pdf');
   ensurePdf('pdfEn','https://github.com/abraxasgroup/MarketingBooks/raw/main/downloads/how-to-be-an-intermediary-mining-business.pdf');
 
-  /* Reveal init */
   document.querySelectorAll('.reveal').forEach(el=>el.classList.add('on'));
 </script>
 </body>
